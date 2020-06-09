@@ -39,4 +39,4 @@ function test(operator, firstNumber, secondNumber) {
       alert(result);
     });
   }
-})();
+})();w

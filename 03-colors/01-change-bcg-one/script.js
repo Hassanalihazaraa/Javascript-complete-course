@@ -8,9 +8,32 @@
 
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
+function changeColor(buttons) {
+    switch (buttons) {
+        case "red":
+            return document.body.style.backgroundColor = "red";
+            break;
+        case "green":
+            return document.body.style.backgroundColor = "green";
+            break;
+        case "yellow":
+            return document.body.style.backgroundColor = "yellow";
+            break;
+        case "blue":
+            return document.body.style.backgroundColor = "blue";
+            break;
+        default:
+            break;
+    }
+}
 
-(function() {
-
-    // your code here
-
+(function () {
+    const actions = document.getElementsByClassName("actions");
+    for (let i = 0; i < actions.length; i++) {
+        actions[i].addEventListener("click", e => {
+            let buttons = e.target.id;
+            let result = changeColor(buttons);
+            console.log(result);
+        })
+    }
 })();
