@@ -9,9 +9,8 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
-
-    var people = [
+(() => {
+    const people = [
         {
             firstname: "Dreddy",
             lastname: "Nussgen",
@@ -88,7 +87,8 @@
             age: 81,
         },
     ];
-
-    // your code here
-
+    document.getElementById("run").addEventListener("click", () => {
+        const adult = people.filter(person => person.age >= 18);
+        console.log(adult);
+    })
 })();

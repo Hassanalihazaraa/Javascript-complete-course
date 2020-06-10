@@ -9,9 +9,8 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
-
-    var fruits = [
+(() => {
+    let fruits = [
         "pomme",
         "poire",
         "fraise",
@@ -23,7 +22,9 @@
         "raisin",
         "cerise",
     ];
-
-    // your code here
-
+    document.getElementById("run").addEventListener("click", () => {
+        fruits.splice(0, 1, "banana");
+        fruits.push("kiwi");
+        console.log(fruits);
+    })
 })();

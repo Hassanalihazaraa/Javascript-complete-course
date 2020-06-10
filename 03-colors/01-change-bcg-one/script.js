@@ -27,7 +27,7 @@ function changeColor(buttons) {
     }
 }
 
-(function () {
+(() => {
     const actions = document.getElementsByClassName("actions");
     for (let i = 0; i < actions.length; i++) {
         actions[i].addEventListener("click", e => {

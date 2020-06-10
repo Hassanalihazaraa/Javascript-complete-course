@@ -9,9 +9,8 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
-
-    var people = [
+(() => {
+    const people = [
         {
             firstname: "Grenville",
             lastname: "Stive",
@@ -88,7 +87,9 @@
             age: 81,
         },
     ];
-
-    // your code here
-
+    document.getElementById("run").addEventListener("click", () => {
+        const sum = people.map(person => (person.age)).reduce((a, b) => (a + b));
+        console.log(sum);
+        alert(sum);
+    });
 })();

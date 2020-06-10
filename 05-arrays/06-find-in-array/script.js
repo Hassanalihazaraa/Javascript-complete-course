@@ -9,9 +9,8 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
-
-    var people = [
+(() => {
+    const people = [
         {
             firstname: "Bradford",
             lastname: "Coldbath",
@@ -88,7 +87,12 @@
             email: "gkeatche@google.fr",
         },
     ];
-
-    // your code here
-
+    document.getElementById("run").addEventListener("click", () => {
+        people.forEach((person) => {
+            if (person.firstname === "Jean" && person.lastname === "Dupont") {
+                console.log(person.email);
+                console.log(people.indexOf(person));
+            }
+        })
+    })
 })();

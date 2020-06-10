@@ -9,23 +9,22 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
-
-    var fruits = [
-        "pomme",
-        "poire",
-        "fraise",
-        "tomate",
+(() => {
+    let fruits = [
+        "apple",
+        "pear",
+        "raspberry",
+        "tomatos",
         "kiwi",
-        "banane",
+        "banana",
         "orange",
-        "mandarine",
+        "mandarin",
         "durian",
-        "pêche",
-        "raisin",
-        "cerise",
+        "peache",
+        "grap",
+        "cherry",
     ];
-
-    // your code here
-
+    document.getElementById("run").addEventListener("click", () => {
+        fruits.forEach(element => console.log(element));
+    })
 })();

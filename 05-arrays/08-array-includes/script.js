@@ -9,9 +9,8 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
-
-    var fruits = [
+(() => {
+    const fruits = [
         "apple",
         "perry",
         "strawberry",
@@ -25,7 +24,12 @@
         "grapes",
         "cherry",
     ];
-
-    // your code here
-
+    document.getElementById("run").addEventListener("click", () => {
+        if (fruits.includes("apple")) {
+            console.log("yes");
+        }
+        else {
+            console.log("no");
+        }
+    })
 })();

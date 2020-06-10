@@ -9,26 +9,23 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
+//calculations
 function test(operator, firstNumber, secondNumber) {
   switch (operator) {
     case "addition":
       return firstNumber + secondNumber;
-      break;
     case "substraction":
       return firstNumber - secondNumber;
-      break;
     case "multiplication":
       return firstNumber * secondNumber;
-      break;
     case "division":
       return firstNumber / secondNumber;
-      break;
     default:
-      break;
   }
 }
 
-(function operation() {
+//getting input and selecting the buttons
+(() => {
   const operators = document.getElementsByClassName("operator");
   for (let i = 0; i < operators.length; i++) {
     operators[i].addEventListener("click", e => {
@@ -39,4 +36,4 @@ function test(operator, firstNumber, secondNumber) {
       alert(result);
     });
   }
-})();w
+})();

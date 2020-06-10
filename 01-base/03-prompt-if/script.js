@@ -9,12 +9,11 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(() => {
   let answer = prompt("Want some cake?");
   if(answer == "yes"){
     alert("Congratulations");
   } else {
     alert("More cake for me then :P");
   }
-
 })();

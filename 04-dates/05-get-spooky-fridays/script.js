@@ -9,8 +9,18 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
-
-    // your code here
-
+(() => {
+    document.getElementById("run").addEventListener("click", () => {
+        const year = document.getElementById("year").value;
+        const calculateFriday = (year) => {
+            for (let month = 1; month < 12; month++) {
+                const date = new Date(year, month, 13);
+                if (date.getDay() === 5) {
+                    let monthNames = ["January", "february", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                    console.log(alert(monthNames[month]));
+                }
+            }
+        }
+        return calculateFriday(year);
+    })
 })();
