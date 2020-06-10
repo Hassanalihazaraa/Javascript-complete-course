@@ -10,6 +10,6 @@
 // You will have time to focus on it later.
 
 (() => {
-    let name = prompt("What is your name?");
+    const name = prompt("What is your name?");
     alert("Hello" + name);
 })();

@@ -10,26 +10,26 @@
 // You will have time to focus on it later.
 
 (() => {
-    
+    document.getElementById("run").addEventListener("click", () => {
         let randomNumbers = [];
         for (let i = 0; i < 10; i++) {
             randomNumbers[i] = Math.floor(Math.random() * 100);
             console.log(document.getElementById("n-" + (i + 1)).innerHTML = randomNumbers[i]);
         }
         //sorting number and then getting the smallest number
-        let min = randomNumbers.sort((a, b) => a - b);
+        const min = randomNumbers.sort((a, b) => a - b);
         document.getElementById("min").innerHTML = Math.min(min[0]);
 
         //sorting number and then getting the smallest number
-        let max = randomNumbers.sort((a, b) => a - b);
+        const max = randomNumbers.sort((a, b) => a - b);
         document.getElementById("max").innerHTML = Math.min(max[9]);
 
         //sum of all number
-        let sum = randomNumbers.reduce((min, max) => min + max, 0);
+        const sum = randomNumbers.reduce((min, max) => min + max, 0);
         document.getElementById("sum").innerHTML = sum;
 
         //average of all numbers
-        let average = sum / randomNumbers.length;
+        const average = sum / randomNumbers.length;
         document.getElementById("average").innerHTML = average;
     })
 })();

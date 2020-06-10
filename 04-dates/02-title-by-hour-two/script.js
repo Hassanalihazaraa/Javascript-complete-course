@@ -10,9 +10,9 @@
 // You will have time to focus on it later.
 
 (() => {
-    let date = new Date();
-    let currentHour = date.getHours();
-    let minutes = date.getMinutes();
+    const date = new Date();
+    const currentHour = date.getHours();
+    const minutes = date.getMinutes();
     if (currentHour <= 17 && minutes <= 30) {
         document.getElementById("target").innerHTML = "Hello!";
     }

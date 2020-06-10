@@ -10,9 +10,9 @@
 // You will have time to focus on it later.
 
 (() => {
-    let button = document.getElementById("run");
+    const button = document.getElementById("run");
     button.addEventListener("click", () => {
-        let Color = document.getElementById("color").value;
+        const Color = document.getElementById("color").value;
         document.body.style.background = Color;
     })
 })();

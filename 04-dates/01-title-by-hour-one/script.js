@@ -10,8 +10,8 @@
 // You will have time to focus on it later.
 
 (() => {
-    let date = new Date();
-    let currentHour = date.getHours();
+    const date = new Date();
+    const currentHour = date.getHours();
     if (currentHour <= 18) {
         document.getElementById("target").innerHTML = "Hello!";
     }

@@ -12,18 +12,13 @@ function changeColor(buttons) {
     switch (buttons) {
         case "red":
             return document.body.style.backgroundColor = "red";
-            break;
         case "green":
             return document.body.style.backgroundColor = "green";
-            break;
         case "yellow":
             return document.body.style.backgroundColor = "yellow";
-            break;
         case "blue":
             return document.body.style.backgroundColor = "blue";
-            break;
         default:
-            break;
     }
 }
 
@@ -31,8 +26,8 @@ function changeColor(buttons) {
     const actions = document.getElementsByClassName("actions");
     for (let i = 0; i < actions.length; i++) {
         actions[i].addEventListener("click", e => {
-            let buttons = e.target.id;
-            let result = changeColor(buttons);
+            const buttons = e.target.id;
+            const result = changeColor(buttons);
             console.log(result);
         })
     }

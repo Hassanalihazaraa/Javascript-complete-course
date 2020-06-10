@@ -10,7 +10,7 @@
 // You will have time to focus on it later.
 
 (() => {
-    document.getElementById("run").addEventListener("click", function () {
+    document.getElementById("run").addEventListener("click", () => {
         for (let i = 1; i * i <= 21; i++) {
             alert(i * i);
         }

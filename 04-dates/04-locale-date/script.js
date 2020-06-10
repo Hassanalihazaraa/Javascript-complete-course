@@ -10,17 +10,17 @@
 // You will have time to focus on it later.
 
 (() => {
-    let date = new Date();
-    let day = date.getDate();
-    let dayName = date.getDay() - 1;
-    let month = date.getMonth();
-    let year = date.getFullYear();
-    let hour = date.getHours();
-    let minutes = date.getMinutes();
-    let dayNames = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-    let dayWithNames = dayNames[dayName];
-    let monthNames = ["January", "february", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    let monthWithNames = monthNames[month];
+    const date = new Date();
+    const day = date.getDate();
+    const dayName = date.getDay() - 1;
+    const month = date.getMonth();
+    const year = date.getFullYear();
+    const hour = date.getHours();
+    const minutes = date.getMinutes();
+    const dayNames = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+    const dayWithNames = dayNames[dayName];
+    const monthNames = ["January", "february", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const monthWithNames = monthNames[month];
     document.getElementById("target").innerHTML = dayWithNames + " " + day + " " + monthWithNames + " " + year + ", " + hour + "h" + minutes;
 })();
 

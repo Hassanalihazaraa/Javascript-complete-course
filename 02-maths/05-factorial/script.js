@@ -11,7 +11,7 @@
 
 (() => {
     // to get the value of an input: document.getElementById("element-id").value
-    document.getElementById("run").addEventListener("click", function () {
+    document.getElementById("run").addEventListener("click", () => {
         let number = parseFloat(document.getElementById("number").value);
         function factorial(num) {
             if (num === 0 || num === 1)

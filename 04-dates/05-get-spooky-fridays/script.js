@@ -16,7 +16,7 @@
             for (let month = 1; month < 12; month++) {
                 const date = new Date(year, month, 13);
                 if (date.getDay() === 5) {
-                    let monthNames = ["January", "february", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                    const monthNames = ["January", "february", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
                     console.log(alert(monthNames[month]));
                 }
             }

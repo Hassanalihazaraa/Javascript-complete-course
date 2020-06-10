@@ -10,6 +10,6 @@
 // You will have time to focus on it later.
 
 (() => {
-    let myAlert = "Hello world!";
+    const myAlert = "Hello world!";
     alert(myAlert);
 })();

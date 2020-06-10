@@ -11,15 +11,15 @@
 
 (() => {
     document.getElementById("run").addEventListener("click", () => {
-        let day = document.getElementById("dob-day").value;
-        let month = document.getElementById("dob-month").value;
-        let year = document.getElementById("dob-year").value;
+        const day = document.getElementById("dob-day").value;
+        const month = document.getElementById("dob-month").value;
+        const year = document.getElementById("dob-year").value;
         //calcualte age
         function birthDay(day, month, year) {
-            let currentDate = new Date();
-            let currentDay = currentDate.getDate() - day;
-            let currentMonth = currentDate.getMonth() - month + 1;
-            let currentYear = currentDate.getFullYear() - year;
+            const currentDate = new Date();
+            const currentDay = currentDate.getDate() - day;
+            const currentMonth = currentDate.getMonth() - month + 1;
+            const currentYear = currentDate.getFullYear() - year;
             console.log(currentDay, currentMonth, currentYear);
             if (currentMonth < month || currentMonth === month && currentDay < day) {
                 --currentYear;

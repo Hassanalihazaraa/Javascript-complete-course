@@ -10,7 +10,7 @@
 // You will have time to focus on it later.
 
 (() => {
-  let answer = prompt("Want some cake?");
+  const answer = prompt("Want some cake?");
   if(answer == "yes"){
     alert("Congratulations");
   } else {

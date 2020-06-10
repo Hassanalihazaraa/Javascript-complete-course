@@ -21,7 +21,7 @@
 
   document
     .getElementById("substraction")
-    .addEventListener("click", function () {
+    .addEventListener("click", () => {
       const firstNumber = document.getElementById("op-one").value;
       const secondNumber = document.getElementById("op-two").value;
       const result = parseInt(firstNumber) - parseInt(secondNumber);
@@ -30,14 +30,14 @@
 
   document
     .getElementById("multiplication")
-    .addEventListener("click", function () {
+    .addEventListener("click", () => {
       const firstNumber = document.getElementById("op-one").value;
       const secondNumber = document.getElementById("op-two").value;
       const result = parseInt(firstNumber) * parseInt(secondNumber);
       alert(result);
     });
 
-  document.getElementById("division").addEventListener("click", function () {
+  document.getElementById("division").addEventListener("click", () => {
     const firstNumber = document.getElementById("op-one").value;
     const secondNumber = document.getElementById("op-two").value;
     const result = parseInt(firstNumber) / parseInt(secondNumber);

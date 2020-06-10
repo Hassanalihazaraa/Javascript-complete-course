@@ -10,7 +10,7 @@
 // You will have time to focus on it later.
 
 (() => {
-    let people = [
+    const people = [
         {
             firstname: "Garald",
             lastname: "Freschi",

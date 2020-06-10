@@ -17,7 +17,7 @@
     " " +
     prompt("Where do you live?\n");
   let isConfirmed = confirm("Are you sure\n" + questions);
-  let isSure = true;
+  const isSure = true;
   while (isSure) {
     if (isConfirmed) {
       isSure = false;

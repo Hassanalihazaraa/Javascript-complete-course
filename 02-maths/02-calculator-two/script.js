@@ -29,10 +29,10 @@ function test(operator, firstNumber, secondNumber) {
   const operators = document.getElementsByClassName("operator");
   for (let i = 0; i < operators.length; i++) {
     operators[i].addEventListener("click", e => {
-      let operator = e.target.id;
+      const operator = e.target.id;
       let firstNumber = parseFloat(document.getElementById("op-one").value);
       let secondNumber = parseFloat(document.getElementById("op-two").value);
-      let result = test(operator, firstNumber, secondNumber);
+      const result = test(operator, firstNumber, secondNumber);
       alert(result);
     });
   }
