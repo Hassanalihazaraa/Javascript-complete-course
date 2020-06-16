@@ -10,5 +10,25 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        let name = document.getElementById("hero-name").value;
+        let alterEgo = document.getElementById("hero-alter-ego").value;
+        let powers = document.getElementById("hero-powers").value;
+
+        fetch('../../_shared/api.json')
+            .then(response => response.json())
+            .then(data => data.heroes)
+            .then(heroes => {
+                let id = heroes.length + 1;
+                heroes[heroes.length] = {
+                    id: id,
+                    name: name,
+                    AlterEgo: alterEgo,
+                    power: [powers]
+                }
+                console.table(heroes);
+            }).catch = error => {
+            console.error(error);
+        }
+    })
 })();

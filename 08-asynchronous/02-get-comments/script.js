@@ -10,5 +10,19 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
-})();
+    document.getElementById("run").addEventListener("click", () => {
+        const commentTable = (error, res) => {
+            error ? console.log(error) : console.table(res);
+        }
+
+        const postsTable = (error, res) => {
+            if (error) {
+                console.log(error);
+            } else {
+                console.table(res);
+                window.lib.getComments(res, commentTable);
+            }
+        }
+        window.lib.getPosts(postsTable);
+    })
+})()

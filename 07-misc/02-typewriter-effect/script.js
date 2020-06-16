@@ -9,8 +9,20 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(() => {
+    let text = document.getElementById("target").innerHTML;
+    let i = 0;
+    let min = 50;
+    let max = 100;
+    let speed = Math.floor(Math.random() * (max - min)) + min;
+    let emptyText = document.getElementById("target").innerHTML = "";
 
-    // your code here
-
+    function typeWriter() {
+        if (i < text.length) {
+            document.getElementById("target").innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+    typeWriter();
 })();

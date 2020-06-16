@@ -10,5 +10,17 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        let id = parseInt(document.getElementById("hero-id").value);
+
+        fetch('../../_shared/api.json')
+            .then(response => response.json())
+            .then(data => data.heroes)
+            .then(heroes => {
+                console.table(heroes.filter(item => item.id !== id));
+
+            }).catch = error => {
+            console.error(error);
+        }
+    })
 })();

@@ -9,53 +9,70 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
-	let fontSizes = ["14px", "18px", "22px", "26px", "30px"];
-	let target = document.getElementById('target');
-	let string = target.innerHTML;
-	let stringArray = [];
-	for(let i = 0; i < string.length; i++){
-		let thisLetter = target.innerHTML.charAt(i);
-		stringArray.push(thisLetter);
-	}
-	let size = 0;
+(() => {
+    let fontSizes = ["1.5rem", "1.8rem", "2rem", "2.2rem", "2.4rem"];
+    let target = document.getElementById('target');
+    let text = target.innerHTML;
+    let textArray = [];
+    for (let i = 0; i < text.length; i++) {
+        let textArr = target.innerHTML.charAt(i);
+        textArray.push(textArr);
+    }
+    let fontSize = 0;
 
-    function wave(){
-    	function sizeChange() {
-    		if (size < 4 && up == true) {
-    			size++;
-    		}
-    		if (size > 0 && up == false) {
-    			size--;
-    		}
-    		if (size == 4) {
-    			up = false;
-    		}
-    		if (size == 0){
-    			up = true;
-    		}
-    	}
-    	let up = true;
-    	target.innerHTML = "";
-    	for(let i = 0; i < stringArray.length; i++){
-    		target.innerHTML += '<span style="font-size: '+fontSizes[size]+';">'+stringArray[i]+'</span>';
-    		if (size < 4 && up == true) {
-    			size++;
-    		}
-    		if (size > 0 && up == false) {
-    			size--;
-    		}
-    		if (size == 4) {
-    			up = false;
-    		}
-    		if (size == 0){
-    			up = true;
-    		}
-    	}
-    	setTimeout(wave, 1000);
+    function textWave() {
+        function changeTextSize() {
+            if (fontSize < 4 && up) {
+                fontSize++;
+            }
+            if (fontSize > 0 && up === false) {
+                fontSize--;
+            }
+            if (fontSize === 4) {
+                up = false;
+            }
+            if (fontSize === 0) {
+                up = true;
+            }
+        }
+
+        let up = true;
+        target.innerHTML = "";
+        for (let i = 0; i < textArray.length; i++) {
+            target.innerHTML += '<span style="font-size: ' + fontSizes[fontSize] + ';">' + textArray[i] + '</span>';
+            if (fontSize < 4 && up === true) {
+                fontSize++;
+            }
+            if (fontSize > 0 && up === false) {
+                fontSize--;
+            }
+            if (fontSize === 4) {
+                up = false;
+            }
+            if (fontSize === 0) {
+                up = true;
+            }
+        }
+        setTimeout(textWave, 1000);
     }
 
-    wave();
-    
-
+    textWave();
 })();
+/*
+let text = document.getElementById("target");
+text.forEach(target => {
+    target.innerHTML = target.textContent.split("").map((text, wave) =>
+        `<span style="transition-delay: ${wave * 25}ms">${text}</span>`).join("");
+})
+let styles = document.getElementById("target").createAttribute("style");
+styles.innerHTML = `
+#style {
+display: inline-block;
+transform: translateY(-30px);
+transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);    
+}`;
+
+//document.getElementById("target").setAttribute("styles", "");
+
+ */
+

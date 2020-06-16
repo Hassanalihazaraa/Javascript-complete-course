@@ -9,8 +9,15 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(() => {
+    document.getElementById('target').innerHTML = localStorage.getItem('counter');
 
-    // your code here
-
+    document.getElementById("increment").addEventListener("click", () => {
+        let counter = localStorage.getItem("counter");
+        counter++;
+        let numbers = document.getElementById("target").innerHTML = counter;
+        localStorage.setItem("counter", numbers);
+    })
 })();
+
+
